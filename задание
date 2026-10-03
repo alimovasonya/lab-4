@@ -1,0 +1,43 @@
+/*
+ Студент: Алимова Софья Сергеевна
+ Группа: ПИ 1-1
+ Название: конвертер велечин
+*/
+#include <stdio.h>
+
+int main() 
+{
+    double a, b, result;
+    int command;
+    
+    printf("Введенеие числа: \n");
+    scanf("%lf %lf", &a);
+    
+    printf("1 - метры в сантиметры\n 2 - килограммы в граммы\n");
+    printf("3 - цельсий в Фарингейт\n 4 - часы в минуты\n");
+    printf("Выберете операцию:");
+    scanf("%d", &command);
+
+    switch (command)
+    {
+    case 1:
+        result = a * 100;
+        printf("Результат: %.2f\n", result);
+        break;
+    case 2:
+        result = a * 1000;
+        printf("Результат: %.2f\n", result);
+        break;
+    case 3:
+        result = a * 9 / 5 + 32;
+        printf("Результат: %.2f\n", result);
+        break;
+    case 4:
+        result = a * 60;
+        printf("Результат: %.2f\n", result);
+        break;
+        
+    }
+    
+    return 0;
+}
